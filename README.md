@@ -3,7 +3,7 @@ Create target localization xliff file for Storyboard import.
 ####Dependent module
 
 1. lxml  
-If you have problem with install lxml module in MAC. Please trying run the commandline below:  
+If you have problem with install lxml module in Mac OS. Please trying run the commandline below:  
 (Maybe needs sudo) `STATIC_DEPS=true pip install lxml`
 
 
