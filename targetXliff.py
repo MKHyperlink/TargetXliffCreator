@@ -28,7 +28,7 @@ def getStringTable():
             # print '[%s]' %strMap[name.strip('"')]
     return strMap
 
-strings = getStringTable()
+stringTable = getStringTable()
 
 for f in root:
     f.attrib['target-language'] = language
@@ -36,11 +36,22 @@ for f in root:
 
     for trans in body.iter(createFullTagName('trans-unit')):
         note = trans.find(createFullTagName('note'))
-        if note is not None:
-            for s in strings.keys():
-                if s in note.text:
-                    newEle = etree.Element('target')
-                    newEle.text = strings[s].decode('utf-8')
-                    trans.insert(trans.index(note), newEle)
+        target = trans.find(createFullTagName('target'))
+        source = trans.find(createFullTagName('source'))
+        if target is None:
+            containedStr = None
+
+            for key in stringTable.keys():
+                if note is not None and key in note.text:
+                    containedStr = key
+                    break;
+                
+            newEle = etree.Element('target')
+            if containedStr is not None:
+                newEle.text = stringTable[key].decode('utf-8')
+            else:
+                newEle.text = source.text.decode('utf-8')
+            trans.insert(trans.index(source)+1, newEle)
+
 
 nodes.write('%s.xliff'%(language), pretty_print=True, xml_declaration=True, encoding='utf-8')  
