@@ -24,8 +24,9 @@ def getStringTable():
     with open(srcFile) as myfile:
         for line in myfile:
             name, var = line.partition("=")[::2]
-            strMap[name.strip('"')] = var.strip()[1:-2]
-            # print '[%s]' %strMap[name.strip('"')]
+            if name and var:
+                strMap[name.strip().strip('"')] = var.strip()[1:-2]
+                # print '[%s][%s]' %(name.strip().strip('"'), var.strip()[1:-2])
     return strMap
 
 stringTable = getStringTable()
@@ -48,7 +49,7 @@ for f in root:
                 
             newEle = etree.Element('target')
             if containedStr is not None:
-                newEle.text = stringTable[key].decode('utf-8')
+                newEle.text = stringTable[containedStr].decode('utf-8')
             else:
                 newEle.text = source.text.decode('utf-8')
             trans.insert(trans.index(source)+1, newEle)
