@@ -1,4 +1,4 @@
-Create target localization xliff file for XCode import.
+Create target localization xliff file for Xcode import.
 
 ####Dependent module
 
