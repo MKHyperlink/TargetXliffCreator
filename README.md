@@ -1,4 +1,4 @@
-Create target localization xliff file for Storyboard import.
+Create target localization xliff file for XCode import.
 
 ####Dependent module
 
