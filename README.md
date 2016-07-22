@@ -24,3 +24,5 @@ When you start a Xcode project with Storyboard for UI development and want to lo
     It's according to mapping the text value of note tag in en.xliff with Key in infoPlist.plist file.
 6. The final step is import created Target xliff file by Xcode.
 ![ScreenShot](/docs/screenshot/localizationImport.png)
+7. Finally, you'll got localized stroyboard string file.
+![ScreenShot](/docs/screenshot/localizationStroyboardFile.png)
