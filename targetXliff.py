@@ -51,7 +51,9 @@ for f in root:
             if containedStr is not None:
                 newEle.text = stringTable[containedStr].decode('utf-8')
             else:
-                newEle.text = source.text.decode('utf-8')
+                if source is not None and source.text is not None:
+                    print source.text.encode('utf-8')
+                    newEle.text = source.text#.decode('utf-8')                
             trans.insert(trans.index(source)+1, newEle)
 
 
