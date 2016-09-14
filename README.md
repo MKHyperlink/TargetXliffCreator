@@ -26,7 +26,7 @@ If you have problem with install lxml module in Mac OS. Please trying run the co
 ![ScreenShot](/docs/screenshot/storyboard1.png)
 2. Export xliff file from your project.  
 ![ScreenShot](/docs/screenshot/localizationExport.png)
-3. Select "Development Language Only". It will export a Base Xliff file for traslation.  
+3. Select "Development Language Only". It will export a Base Xliff file for translation.  
 ![ScreenShot](/docs/screenshot/baseLangExport.png)
 4. Execute $python targetXliff.py [base_file] [source_file] [target_language]  
     ex. `$python targetXliff.py en.xliff infoPlist.plist ja`      
