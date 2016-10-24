@@ -9,6 +9,7 @@ The other shortcomings is when you add/remove UI component in storyboard, it nee
 
 This tool can use single localization file to modify others localization files that created by storyboard.
 Just few steps:
+
 1. Export Xliff localization file. ((The Xliff file is Apple recommend localization file format)
 2. Using this tool localize Xliff file.
 3. Import Xliff localization file.
@@ -19,7 +20,9 @@ Just few steps:
 
 1. lxml  
 If you have problem with install lxml module in Mac OS. Please trying run the commandline below:  
-(Maybe needs sudo) `STATIC_DEPS=true pip install lxml`
+(Maybe needs sudo) `STATIC_DEPS=true pip install lxml`.<p>
+(If pip install still fail in OSX 10.11.X, please run command 'xcode-select --install' to install Xcode command tool then try again pip install.)
+
 
 ####Guideline
 1. Input a Key instead of a text . ex. Key "firstPg_str01" as screenshot below  
