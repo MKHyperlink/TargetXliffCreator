@@ -1,6 +1,6 @@
 Create target localization xliff file for Xcode import.
 
-####Introduce
+#### Introduce
 This tool is what you want.
 If you are using storyboard to develop your iOS app UI and want to localize your app by single localization file. 
 
@@ -16,7 +16,7 @@ Just few steps:
 4. All your storyboard localization files will localized.
 
 
-####Dependent module
+#### Dependent module
 
 1. lxml  
 If you have problem with install lxml module in Mac OS. Please trying run the commandline below:  
@@ -24,7 +24,7 @@ If you have problem with install lxml module in Mac OS. Please trying run the co
 (If pip install still fail in OSX 10.11.X, please run command 'xcode-select --install' to install Xcode command tool then try again pip install.)
 
 
-####Guideline
+#### Guideline
 1. Input a Key instead of a text . ex. Key "firstPg_str01" as screenshot below  
 ![ScreenShot](/docs/screenshot/storyboard1.png)
 2. Export xliff file from your project.  
